@@ -1,0 +1,139 @@
+% https://github.com/sb2nov/resume (MIT-licensed template format).
+% Resume content: Jegannarayanan Sivakasiulaganathan.
+% Compile with: pdflatex -interaction=nonstopmode Jegannarayanan_Sivakasiulaganathan_Compiler_Resume.tex
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{10pt}
+
+% Single-column, compact layout adapted from sb2nov/resume.
+\addtolength{\oddsidemargin}{-0.47in}
+\addtolength{\evensidemargin}{-0.47in}
+\addtolength{\textwidth}{0.94in}
+\addtolength{\topmargin}{-0.43in}
+\addtolength{\textheight}{0.86in}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parindent}{0pt}
+\raggedright
+\urlstyle{same}
+
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\titlerule\vspace{-5pt}]
+\titlespacing*{\section}{0pt}{11pt}{6pt}
+
+\newcommand{\resumeSubheading}[4]{%
+  \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \small #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-2pt}
+}
+\newcommand{\resumeProjectHeading}[2]{%
+  \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \small #2 \\
+  \end{tabular*}\vspace{-3pt}
+}
+\newenvironment{resumeBullets}{%
+  \begin{itemize}[leftmargin=0.18in, itemsep=3pt, topsep=3pt, parsep=0pt, partopsep=0pt]
+  \small
+}{\end{itemize}\vspace{2pt}}
+
+\begin{document}
+
+\begin{center}
+	{\LARGE\bfseries Jegannarayanan Sivakasiulaganathan}\\[3pt]
+	\small Dedham, MA \enspace $\vert$ \enspace
+	\href{tel:+16692331124}{+1-669-233-1124} \enspace $\vert$ \enspace
+	\href{mailto:Jegannarayanan_Sivakasiulaganathan@student.uml.edu}{Jegannarayanan\_Sivakasiulaganathan@student.uml.edu}\\[2pt]
+	\small \href{https://github.com/handel-fan}{github.com/handel-fan}
+\end{center}
+\vspace{-9pt}
+
+\section{Education}
+
+\resumeSubheading
+{University of Massachusetts Lowell}{Expected May 2027}
+{M.S. Computer Science}{}
+
+\vspace{5pt}
+
+{\small
+	\textbf{Relevant Coursework:}
+	Compiler Engineering, Effective Functional Programming,
+	Graduate Algorithms, Operating Systems I,
+	Deep Learning (LLMs/LVMs).
+}
+
+\vspace{12pt}
+
+\resumeSubheading
+{University of Massachusetts Amherst}{May 2018}
+{B.S. Computational and Applied Mathematics}{}
+
+\section{Research and Compiler Projects}
+\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{Lean 4, MLIR $\mid$ 2026--Present}
+\begin{resumeBullets}
+	\item Investigating a compiler path from high-level operations in Lean's TensorLib to
+	MLIR's \texttt{linalg} dialect, with matrix multiplication as an initial case
+	study.
+	\item Examining Lean's elaborated \texttt{Expr} representation to identify TensorLib
+	calls, arguments, and types before generating lower-level IR.
+	\item Wrote corresponding Lean and MLIR matrix-multiplication examples; examining
+	semantic-preservation requirements for tensor operations and lowering.
+\end{resumeBullets}
+
+\resumeProjectHeading{LLVM/Clang AST Exploration}{C++, LLVM, Clang}
+\begin{resumeBullets}
+	\item Built LLVM/Clang from source and implemented Clang AST traversal tooling using
+	\texttt{RecursiveASTVisitor}, \texttt{ASTConsumer}, and \texttt{FrontendAction}
+	to inspect C++ declarations.
+\end{resumeBullets}
+
+\resumeProjectHeading{Monkey Programming Language Interpreter}{C++ $\mid$ \href{https://github.com/handel-fan/first-interpreter-in-cpp}{GitHub}}
+\begin{resumeBullets}
+	\item Implementing a Monkey-language interpreter in C++ to explore lexical analysis,
+	parsing, and interpreter architecture.
+\end{resumeBullets}
+
+\section{Professional Experience}
+\resumeSubheading{KBRA}{Dresher, PA (Remote)}{Software Developer (promoted from Associate Software Developer)}{Aug 2022--Present}
+\begin{resumeBullets}
+	\item Led technical-debt initiatives and migration away from an unsupported PHP
+	framework toward C\#/.NET services, improving maintainability and reducing
+	reliance on legacy code.
+	\item Developed C\# ASP.NET Core backend services, worked with Hot Chocolate GraphQL
+	schemas, and contributed to React frontend features.
+	\item Tested Docker startup-time retrieval of AWS Secrets Manager configuration for a
+	.NET service, without persisting secrets to disk.
+\end{resumeBullets}
+
+\resumeSubheading{Aspen Technology}{Bedford, MA}{Software Developer (previously Software Developer I)}{May 2018--Aug 2022}
+\begin{resumeBullets}
+	\item Maintained and developed C\# desktop software, resolving defects and supporting
+	multiple production applications.
+	\item Progressed from Software Developer I to Software Developer in July 2021.
+\end{resumeBullets}
+
+\section{Technical Skills}
+ {\small
+  \textbf{Programming:} Lean 4, C++, Python, C\#, Haskell, TypeScript; Go (exploratory)\\[2pt]
+  \textbf{Compilers and formal methods:} MLIR, LLVM/Clang, AST traversal, Rocq (coursework)\\[2pt]
+  \textbf{Software and systems:} Linux, Git, Docker, GitLab CI/CD, ASP.NET Core, React
+ }
+
+\end{document}
