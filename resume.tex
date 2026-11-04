@@ -108,14 +108,14 @@
 
 \resumeProjectHeading{Toy Programming Language Interpreter in C++}{}
 \begin{resumeBullets}
-	\item Implementing an interpreter in C++ for a toy language to explore lexing
+	\item Implementing an interpreter in C++ for a toy language to explore lexing,
 	parsing, and interpreter architecture.
-	\item Completed a lexer, working on a parser (Needs to be changed to indicate what
-	kind of architectural work and pitfalls I came up against. These include unique
-	pointer and when to emit errors and the overall architecture of all of those
-	things. It resulted in a difficult design decision.)
-	\item Explored C++ memory management, pitfalls, and architectural decisions involving
-	heap allocation and \texttt{std::unique\_ptr}.
+	\item Completed the lexer and began implementing the parser, working through
+	architectural decisions involving when and where to report errors, how to
+	manage memory ownership with \texttt{std::unique\_ptr}, and how to structure
+	code when designing a parser.
+	\item Explored C++ memory ownership and lifetime considerations involving heap
+	allocation and \texttt{std::unique\_ptr}.
 \end{resumeBullets}
 
 \section{Professional Experience (7 Years)}
@@ -126,19 +126,18 @@
 	unsupported PHP framework to C\#/.NET services.
 	\item Developed C\# ASP.NET Core backend services, worked with Hot Chocolate GraphQL
 	schemas, and contributed to React frontend features while collaborating with
-	staff engineers. (What I did differently is threw myself at new C sharp
-	technologies like GraphQL and understood every part of the HTTP request
-	pipeline that is often found in the C sharp top-down file for ASP.NET and even
-	looked into record constructors. In a sentence, I was digging even with
-	C-sharp, I didn't just implement features, I was actively exploring how the
-	technology worked at every step.)
-\end{resumeBullets}
+	staff engineers.
+	\item Independently investigated C\#/.NET technologies beyond immediate feature
+	requirements, including but not limited to: Hot Chocolate GraphQL, the ASP.NET
+	Core HTTP request pipeline, and C\# record constructors. Applied this deeper
+	understanding to make informed implementation decisions and better support the
+	team.\end{resumeBullets}
 
 \resumeSubheading{Aspen Technology}{Bedford, MA}{Software Developer (previously Software Developer I)}{May 2018--Aug 2022}
 \begin{resumeBullets}
-	\item Independently maintained and developed multiple C\# desktop applications,
-	resolving customer-reported issues and providing technical support across
-	products. (You can change this one to be the new thing that you talked about)
+	\item Independently diagnosed and resolved defects across multiple production C\#
+	desktop applications, reproducing customer-reported issues, tracing root
+	causes, and implementing fixes.
 	\item Progressed from Software Developer I to Software Developer in July 2021.
 \end{resumeBullets}
 
