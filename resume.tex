@@ -88,11 +88,14 @@
 \section{Research and Compiler Projects}
 \resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{Lean 4, MLIR $\mid$ 2026--Present}
 \begin{resumeBullets}
-	\item Investigating a compiler path from high-level operations in Lean's TensorLib to
-	MLIR's \texttt{linalg} dialect, with matrix multiplication as an initial case
-	study.
+	\item Investigating a compiler path from high-level operations in a \texttt{lean}
+	library representing tensors to MLIR's \texttt{linalg} dialect, with matrix
+	multiplication as an initial case study.
 	\item Examining Lean's elaborated \texttt{Expr} representation to identify TensorLib
-	calls, arguments, and types before generating lower-level IR.
+	calls, arguments, and types before generating lower-level IR. (This needs to be
+	reworked - What I'm really doing is looking at compiler primitives to decide
+	what to transpile. I've asked plenty of questions on this and done a lot of
+	experimentation.)
 	\item Wrote corresponding Lean and MLIR matrix-multiplication examples; examining
 	semantic-preservation requirements for tensor operations and lowering.
 \end{resumeBullets}
@@ -111,29 +114,28 @@
 \end{resumeBullets}
 
 \section{Professional Experience}
-\resumeSubheading{KBRA}{Dresher, PA (Remote)}{Software Developer (promoted from Associate Software Developer)}{Aug 2022--Present}
+\resumeSubheading{KBRA}{Dresher, PA (Remote)}{Software Developer (promoted from Associate Software Developer)}{Aug 2022--July 2025}
 \begin{resumeBullets}
 	\item Led technical-debt initiatives and migration away from an unsupported PHP
 	framework toward C\#/.NET services, improving maintainability and reducing
 	reliance on legacy code.
 	\item Developed C\# ASP.NET Core backend services, worked with Hot Chocolate GraphQL
 	schemas, and contributed to React frontend features.
-	\item Tested Docker startup-time retrieval of AWS Secrets Manager configuration for a
-	.NET service, without persisting secrets to disk.
 \end{resumeBullets}
 
 \resumeSubheading{Aspen Technology}{Bedford, MA}{Software Developer (previously Software Developer I)}{May 2018--Aug 2022}
 \begin{resumeBullets}
 	\item Maintained and developed C\# desktop software, resolving defects and supporting
-	multiple production applications.
+	multiple production applications. (I provided excellent customer service and
+	worked Single-handedly on multiple products at the same time.)
 	\item Progressed from Software Developer I to Software Developer in July 2021.
 \end{resumeBullets}
 
 \section{Technical Skills}
  {\small
-  \textbf{Programming:} Lean 4, C++, Python, C\#, Haskell, TypeScript; Go (exploratory)\\[2pt]
-  \textbf{Compilers and formal methods:} MLIR, LLVM/Clang, AST traversal, Rocq (coursework)\\[2pt]
-  \textbf{Software and systems:} Linux, Git, Docker, GitLab CI/CD, ASP.NET Core, React
+  \textbf{Programming:} C++, Python, Lean 4, Haskell, C\#\\[1pt]
+  \textbf{Compilers and formal methods:} MLIR, LLVM/Clang, AST traversal\\[2pt]
+  \textbf{Software and systems:} Linux, Git, shell programming,
  }
 
 \end{document}
