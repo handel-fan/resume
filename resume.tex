@@ -87,7 +87,7 @@
 {B.S. Computational and Applied Mathematics}{}
 
 \section{Research and Compiler Projects}
-\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{2026--Present}
+\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{September 2026--Present}
 \begin{resumeBullets}
 	\item Investigating a lowering path from high-level tensor operations in a Lean
 	tensor library to MLIR's \texttt{linalg} dialect, using matrix multiplication
@@ -101,19 +101,18 @@
 \resumeProjectHeading{Haskell Final Project: Python-to-MLIR Front-End Translation}{}
 \begin{resumeBullets}
 	\item Project which involved parsing Python source code into an AST, then
-	implementing Haskell parser combinators to convert it into a custom AST.
-	\item Designed the custom AST to represent a subset of Python and support eventual
-	translation into MLIR using \texttt{mlir-hs}.
+	implementing Haskell AST transformations to convert it into a custom AST.
+	\item Designed the custom AST to represent a small subset of Python and support
+	eventual translation into MLIR using \texttt{mlir-hs}.
 \end{resumeBullets}
 
 \resumeProjectHeading{Toy Programming Language Interpreter in C++}{}
 \begin{resumeBullets}
 	\item Implementing an interpreter in C++ for a toy language to explore lexing,
 	parsing, and interpreter architecture.
-	\item Completed the lexer and began implementing the parser, working through
-	architectural decisions involving when and where to report errors, how to
-	manage memory ownership with \texttt{std::unique\_ptr}, and how to structure
-	code when designing a parser.
+	\item Completed the lexer and began implementing the parser without \texttt{flex} or
+	\texttt{Bison}, working through architectural decisions involving when and
+	where to report errors as well as statement and expression parsing details.
 	\item Explored C++ memory ownership and lifetime considerations involving heap
 	allocation and \texttt{std::unique\_ptr}.
 \end{resumeBullets}
