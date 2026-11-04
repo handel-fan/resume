@@ -1,6 +1,6 @@
 % https://github.com/sb2nov/resume (MIT-licensed template format).
 % Resume content: Jegannarayanan Sivakasiulaganathan.
-% Compile with: pdflatex -interaction=nonstopmode Jegannarayanan_Sivakasiulaganathan_Compiler_Resume.tex
+% Compile with: pdflatex -interaction=nonstopmode resume_spaced.tex
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -34,24 +34,24 @@
 \raggedright
 \urlstyle{same}
 
-\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\titlerule\vspace{-5pt}]
-\titlespacing*{\section}{0pt}{11pt}{6pt}
+\titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{7pt}
 
 \newcommand{\resumeSubheading}[4]{%
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \small #2 \\
     \textit{\small #3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-2pt}
+  \end{tabular*}\vspace{0pt}
 }
 \newcommand{\resumeProjectHeading}[2]{%
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \small #2 \\
-  \end{tabular*}\vspace{-3pt}
+  \end{tabular*}\vspace{1pt}
 }
 \newenvironment{resumeBullets}{%
   \begin{itemize}[leftmargin=0.18in, itemsep=3pt, topsep=3pt, parsep=0pt, partopsep=0pt]
   \small
-}{\end{itemize}\vspace{2pt}}
+}{\end{itemize}\vspace{3pt}}
 
 \begin{document}
 
@@ -62,13 +62,13 @@
 	\href{mailto:Jegannarayanan_Sivakasiulaganathan@student.uml.edu}{Jegannarayanan\_Sivakasiulaganathan@student.uml.edu}\\[2pt]
 	\small \href{https://github.com/handel-fan}{github.com/handel-fan}
 \end{center}
-\vspace{-9pt}
+\vspace{-4pt}
 
 \section{Education}
 
 \resumeSubheading
 {University of Massachusetts Lowell}{Expected May 2027}
-{M.S. Computer Science}{}
+{M.S. Computer Science \normalfont{(GPA: 3.7/4.0)}}{}
 
 \vspace{5pt}
 
