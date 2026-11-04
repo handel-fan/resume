@@ -1,6 +1,6 @@
 % https://github.com/sb2nov/resume (MIT-licensed template format).
 % Resume content: Jegannarayanan Sivakasiulaganathan.
-% Compile with: pdflatex -interaction=nonstopmode resume_spaced.tex
+% Compile with: pdflatex -interaction=nonstopmode resume.tex
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -35,7 +35,7 @@
 \urlstyle{same}
 
 \titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{12pt}{7pt}
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
 \newcommand{\resumeSubheading}[4]{%
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
@@ -49,9 +49,9 @@
   \end{tabular*}\vspace{1pt}
 }
 \newenvironment{resumeBullets}{%
-  \begin{itemize}[leftmargin=0.18in, itemsep=3pt, topsep=3pt, parsep=0pt, partopsep=0pt]
+  \begin{itemize}[leftmargin=0.18in, itemsep=2pt, topsep=2pt, parsep=0pt, partopsep=0pt]
   \small
-}{\end{itemize}\vspace{3pt}}
+}{\end{itemize}\vspace{2pt}}
 
 \begin{document}
 
@@ -59,7 +59,8 @@
 	{\LARGE\bfseries Jegannarayanan Sivakasiulaganathan}\\[3pt]
 	\small Dedham, MA \enspace $\vert$ \enspace
 	\href{tel:+16692331124}{+1-669-233-1124} \enspace $\vert$ \enspace
-	\href{mailto:Jegannarayanan_Sivakasiulaganathan@student.uml.edu}{Jegannarayanan\_Sivakasiulaganathan@student.uml.edu}\\[2pt]
+	\href{mailto:Jegannarayanan_Sivakasiulaganathan@student.uml.edu}{Jegannarayanan\_Sivakasiulaganathan@student.uml.edu}
+	\\[2pt]
 	\small \href{https://github.com/handel-fan}{github.com/handel-fan}
 \end{center}
 \vspace{-4pt}
@@ -70,11 +71,11 @@
 {University of Massachusetts Lowell}{Expected May 2027}
 {M.S. Computer Science \normalfont{(GPA: 3.7/4.0)}}{}
 
-\vspace{5pt}
+\vspace{-7pt}
 
 {\small
 	\textbf{Relevant Coursework:}
-	Compiler Engineering, Effective Functional Programming,
+	Compiler Engineering, Effective Functional Programming (\texttt{Haskell}),
 	Graduate Algorithms, Operating Systems I,
 	Deep Learning (LLMs/LVMs).
 }
@@ -82,38 +83,36 @@
 \vspace{12pt}
 
 \resumeSubheading
-{University of Massachusetts Amherst}{May 2018}
+{University of Massachusetts Amherst}{Graduated May 2018}
 {B.S. Computational and Applied Mathematics}{}
 
 \section{Research and Compiler Projects}
 \resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{Lean 4, MLIR $\mid$ 2026--Present}
 \begin{resumeBullets}
-	\item Investigating a compiler path from high-level operations in a \texttt{lean}
-	library representing tensors to MLIR's \texttt{linalg} dialect, with matrix
-	multiplication as an initial case study.
-	\item Examining Lean's elaborated \texttt{Expr} representation to identify TensorLib
-	calls, arguments, and types before generating lower-level IR. (This needs to be
-	reworked - What I'm really doing is looking at compiler primitives to decide
-	what to transpile. I've asked plenty of questions on this and done a lot of
-	experimentation.)
+	\item Investigating a lowering path from high-level tensor operations in a Lean
+	tensor library to MLIR's \texttt{linalg} dialect, using matrix multiplication
+	as an initial case study.
+	\item Analyzing Lean compiler representations (\texttt{Expr}, \texttt{IR},
+	\texttt{LCNF}) to decide on which representation to transpile to MLIR.
 	\item Wrote corresponding Lean and MLIR matrix-multiplication examples; examining
 	semantic-preservation requirements for tensor operations and lowering.
 \end{resumeBullets}
 
-\resumeProjectHeading{LLVM/Clang AST Exploration}{C++, LLVM, Clang}
+\resumeProjectHeading{Haskell Final Project: Python-to-MLIR Front-End Translation}{Haskell $\mid$ \href{https://github.com/handel-fan/efp_final/tree/main/pmm}{GitHub}}
 \begin{resumeBullets}
-	\item Built LLVM/Clang from source and implemented Clang AST traversal tooling using
-	\texttt{RecursiveASTVisitor}, \texttt{ASTConsumer}, and \texttt{FrontendAction}
-	to inspect C++ declarations.
+	\item Parsed Python source code into an AST, then implemented Haskell transformations
+	to convert it into a custom AST.
+	\item Designed the custom AST to represent a subset of Python and support eventual
+	translation into MLIR using \texttt{mlir-hs}.
 \end{resumeBullets}
 
-\resumeProjectHeading{Monkey Programming Language Interpreter}{C++ $\mid$ \href{https://github.com/handel-fan/first-interpreter-in-cpp}{GitHub}}
+\resumeProjectHeading{Monkey Programming Language Interpreter}{C++ $\mid$}
 \begin{resumeBullets}
 	\item Implementing a Monkey-language interpreter in C++ to explore lexical analysis,
 	parsing, and interpreter architecture.
 \end{resumeBullets}
 
-\section{Professional Experience}
+\section{Professional Experience (7 Years)}
 \resumeSubheading{KBRA}{Dresher, PA (Remote)}{Software Developer (promoted from Associate Software Developer)}{Aug 2022--July 2025}
 \begin{resumeBullets}
 	\item Led technical-debt initiatives and migration away from an unsupported PHP
@@ -125,17 +124,17 @@
 
 \resumeSubheading{Aspen Technology}{Bedford, MA}{Software Developer (previously Software Developer I)}{May 2018--Aug 2022}
 \begin{resumeBullets}
-	\item Maintained and developed C\# desktop software, resolving defects and supporting
-	multiple production applications. (I provided excellent customer service and
-	worked Single-handedly on multiple products at the same time.)
+	\item Independently maintained and developed multiple C\# desktop applications,
+	resolving customer-reported issues and providing technical support across
+	products.
 	\item Progressed from Software Developer I to Software Developer in July 2021.
 \end{resumeBullets}
 
 \section{Technical Skills}
  {\small
-  \textbf{Programming:} C++, Python, Lean 4, Haskell, C\#\\[1pt]
-  \textbf{Compilers and formal methods:} MLIR, LLVM/Clang, AST traversal\\[2pt]
-  \textbf{Software and systems:} Linux, Git, shell programming,
+  \textbf{Programming:} C++, Python, Haskell, Lean 4,  Fish, C\#\\[1pt]
+  \textbf{Compiler Engineering:} MLIR, Parsing, AST Design and Transformation\\[2pt]
+  \textbf{Software and systems:} Linux, Git, Docker
  }
 
 \end{document}
