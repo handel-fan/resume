@@ -43,9 +43,9 @@
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}\vspace{0pt}
 }
-\newcommand{\resumeProjectHeading}[3]{%
+\newcommand{\resumeProjectHeading}[2]{%
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{#1}\enspace\textit{\small #2} & \small #3 \\
+    \textbf{#1} & \small #2 \\
   \end{tabular*}\vspace{1pt}
 }
 \newenvironment{resumeBullets}{%
@@ -87,7 +87,7 @@
 {B.S. Computational and Applied Mathematics}{}
 
 \section{Research and Compiler Projects}
-\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{Lean 4, MLIR}{2026--Present}
+\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{2026--Present}
 \begin{resumeBullets}
 	\item Investigating a lowering path from high-level tensor operations in a Lean
 	tensor library to MLIR's \texttt{linalg} dialect, using matrix multiplication
@@ -98,44 +98,53 @@
 	semantic preservation requirements.
 \end{resumeBullets}
 
-\resumeProjectHeading{Haskell Final Project: Python-to-MLIR Front-End Translation}{Haskell}{}
+\resumeProjectHeading{Haskell Final Project: Python-to-MLIR Front-End Translation}{}
 \begin{resumeBullets}
-	\item Parsed Python source code into an AST, then implemented Haskell transformations
-	to convert it into a custom AST.
+	\item Project which involved parsing Python source code into an AST, then
+	implementing Haskell parser combinators to convert it into a custom AST.
 	\item Designed the custom AST to represent a subset of Python and support eventual
 	translation into MLIR using \texttt{mlir-hs}.
 \end{resumeBullets}
 
-\resumeProjectHeading{Monkey Programming Language Interpreter}{C++}{}
+\resumeProjectHeading{Toy Programming Language Interpreter in C++}{}
 \begin{resumeBullets}
-	\item Implementing a interpreter in C++ for a toy language to explore lexing parsing,
-	and interpreter architecture.
-	\item Completed a lexer, worked on parsing and I have a REPL working.
-	\item Explored C++ memory management, including heap allocation and
-	\texttt{std::unique\_ptr}
+	\item Implementing an interpreter in C++ for a toy language to explore lexing
+	parsing, and interpreter architecture.
+	\item Completed a lexer, working on a parser (Needs to be changed to indicate what
+	kind of architectural work and pitfalls I came up against. These include unique
+	pointer and when to emit errors and the overall architecture of all of those
+	things. It resulted in a difficult design decision.)
+	\item Explored C++ memory management, pitfalls, and architectural decisions involving
+	heap allocation and \texttt{std::unique\_ptr}.
 \end{resumeBullets}
 
 \section{Professional Experience (7 Years)}
 \resumeSubheading{KBRA}{Dresher, PA (Remote)}{Software Developer (promoted from Associate Software Developer)}{Aug 2022--July 2025}
 \begin{resumeBullets}
-	\item Led technical-debt initiatives and migration away from an unsupported PHP
-	framework toward C\#/.NET services, improving maintainability and reducing
-	reliance on legacy code.
+	\item Independently led a tech debt elimination initiative, coordinating engineers,
+	maintaining technical documentation, and advocating for the migration from an
+	unsupported PHP framework to C\#/.NET services.
 	\item Developed C\# ASP.NET Core backend services, worked with Hot Chocolate GraphQL
-	schemas, and contributed to React frontend features.
+	schemas, and contributed to React frontend features while collaborating with
+	staff engineers. (What I did differently is threw myself at new C sharp
+	technologies like GraphQL and understood every part of the HTTP request
+	pipeline that is often found in the C sharp top-down file for ASP.NET and even
+	looked into record constructors. In a sentence, I was digging even with
+	C-sharp, I didn't just implement features, I was actively exploring how the
+	technology worked at every step.)
 \end{resumeBullets}
 
 \resumeSubheading{Aspen Technology}{Bedford, MA}{Software Developer (previously Software Developer I)}{May 2018--Aug 2022}
 \begin{resumeBullets}
 	\item Independently maintained and developed multiple C\# desktop applications,
 	resolving customer-reported issues and providing technical support across
-	products.
+	products. (You can change this one to be the new thing that you talked about)
 	\item Progressed from Software Developer I to Software Developer in July 2021.
 \end{resumeBullets}
 
 \section{Technical Skills}
  {\small
-  \textbf{Programming:} C++, Python, Haskell, Lean 4,  Fish, C\#\\[1pt]
+  \textbf{Programming:} C++, Python, Haskell, Lean 4, Fish, C\#\\[1pt]
   \textbf{Compiler Engineering:} MLIR, Parsing, AST Design and Transformation\\[2pt]
   \textbf{Software and systems:} Linux, Git, Docker
  }
