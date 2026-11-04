@@ -43,9 +43,9 @@
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}\vspace{0pt}
 }
-\newcommand{\resumeProjectHeading}[2]{%
+\newcommand{\resumeProjectHeading}[3]{%
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{#1} & \small #2 \\
+    \textbf{#1}\enspace\textit{\small #2} & \small #3 \\
   \end{tabular*}\vspace{1pt}
 }
 \newenvironment{resumeBullets}{%
@@ -87,18 +87,18 @@
 {B.S. Computational and Applied Mathematics}{}
 
 \section{Research and Compiler Projects}
-\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{Lean 4, MLIR $\mid$ 2026--Present}
+\resumeProjectHeading{Master's Thesis: Lean TensorLib to MLIR Lowering \textnormal{\emph{(in progress)}}}{Lean 4, MLIR}{2026--Present}
 \begin{resumeBullets}
 	\item Investigating a lowering path from high-level tensor operations in a Lean
 	tensor library to MLIR's \texttt{linalg} dialect, using matrix multiplication
 	as an initial case study.
 	\item Analyzing Lean compiler representations (\texttt{Expr}, \texttt{IR},
 	\texttt{LCNF}) to decide on which representation to transpile to MLIR.
-	\item Wrote corresponding Lean and MLIR matrix-multiplication examples and examined
-	semantic preservation requirements
+	\item Wrote corresponding Lean and MLIR matrix multiplication examples and examined
+	semantic preservation requirements.
 \end{resumeBullets}
 
-\resumeProjectHeading{Haskell Final Project: Python-to-MLIR Front-End Translation}{Haskell}
+\resumeProjectHeading{Haskell Final Project: Python-to-MLIR Front-End Translation}{Haskell}{}
 \begin{resumeBullets}
 	\item Parsed Python source code into an AST, then implemented Haskell transformations
 	to convert it into a custom AST.
@@ -106,12 +106,13 @@
 	translation into MLIR using \texttt{mlir-hs}.
 \end{resumeBullets}
 
-\resumeProjectHeading{Monkey Programming Language Interpreter}{C++}
+\resumeProjectHeading{Monkey Programming Language Interpreter}{C++}{}
 \begin{resumeBullets}
-	\item Implementing a Monkey-language interpreter in C++ to explore lexical analysis,
-	parsing, and interpreter architecture.
-	\item Completed a lexer, worked on parsing and have a REPL working.
-	\item Delved into C++ constructs such as \texttt{unique\_ptr}, heap allocation.
+	\item Implementing a interpreter in C++ for a toy language to explore lexing parsing,
+	and interpreter architecture.
+	\item Completed a lexer, worked on parsing and I have a REPL working.
+	\item Explored C++ memory management, including heap allocation and
+	\texttt{std::unique\_ptr}
 \end{resumeBullets}
 
 \section{Professional Experience (7 Years)}
