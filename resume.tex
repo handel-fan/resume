@@ -39,7 +39,7 @@
 
 \newcommand{\resumeSubheading}[4]{%
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{#1} & \small #2 \\
+    \textbf{#1} & \textit{\small #2} \\
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}\vspace{0pt}
 }
@@ -72,7 +72,7 @@
 \section{Education}
 
 \resumeSubheading
-{University of Massachusetts Lowell}{Expected May 2027}
+{University of Massachusetts Lowell}{\textit{Expected December 2027}}
 {M.S. Computer Science \normalfont{(GPA: 3.7/4.0)}}{}
 
 \vspace{-7pt}
@@ -87,19 +87,19 @@
 \vspace{12pt}
 
 \resumeSubheading
-{University of Massachusetts Amherst}{Graduated May 2018}
+{University of Massachusetts Amherst}{\textit{Graduated May 2018}}
 {B.S. Computational and Applied Mathematics}{}
 
 \section{Research and Compiler Projects}
-\resumeProjectHeading{Master's Thesis: Lean to MLIR Tensor Lowering \textnormal{\emph{(in progress)}}}{September 2026--Present}
+\resumeProjectHeading{Master's Thesis: Lean to MLIR Tensor Lowering \textnormal{\emph{(in progress)}}}{\textit{September 2026--Present}}
 \begin{resumeBullets}
-	\item Investigating a lowering path from high level tensor operations in a Lean
-	tensor library to MLIR's \texttt{linalg} dialect, using matrix multiplication
-	as an initial case study.
+	\item Developing a custom Lean compiler pass to identify annotated tensor operations,
+	extract their declarations and type information, and generate equivalent MLIR
+	code.
 	\item Analyzing Lean compiler representations (\texttt{Expr}, \texttt{IR},
 	\texttt{LCNF}) to decide on which representation to lower to MLIR.
-	\item Wrote corresponding Lean and MLIR matrix multiplication examples and examined
-	semantic preservation requirements.
+	\item Evaluating which Lean language features to support, investigating different
+	compiler architectures.
 \end{resumeBullets}
 
 \resumeProjectHeading{Haskell Project: Python AST Traversal and Translation}{}
